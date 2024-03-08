@@ -3,15 +3,12 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>me.roybailey</groupId>
     <artifactId>sparkjava-retrofit-react</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-
     <properties>
         <jdk.version>1.8</jdk.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -74,7 +71,6 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -87,5 +83,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
