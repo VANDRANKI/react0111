@@ -6,17 +6,14 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-react');
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
         curl: {
             'google-fonts-source': {
                 src: 'http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic',
                 dest: 'src/main/resources/webapp/assets/google-fonts-lato.css'
             }
         },
-
         less: {
             development: {
                 options: {
@@ -27,7 +24,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         watch: {
             jsx: {
                 files: 'src/main/jsx/*.jsx',
@@ -38,7 +34,6 @@ module.exports = function (grunt) {
                 tasks: 'uglify'
             }
         },
-
         jshint: {
             files: [
                 '*.js'
@@ -53,7 +48,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         uglify: {
             options: {
                 mangle: {
@@ -72,7 +66,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         copy: {
             main: {
                 files: [
@@ -85,23 +78,19 @@ module.exports = function (grunt) {
                         filter: 'isFile',
                         flatten: true
                     },
-
                     // includes files within path and its sub-directories
                     //{
                     //    expand: false,
                     //    src: ['node_modules/react/dist/**'],
                     //    dest: 'src/main/resources/webapp/react/'
                     //},
-
                     // makes all src relative to cwd
                     // {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
-
                     // flattens results to a single level
                     // {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},
                 ]
             }
         },
-
         react: {
             mappings: {
                 files: [
